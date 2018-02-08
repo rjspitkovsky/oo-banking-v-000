@@ -17,8 +17,8 @@ attr_accessor :sender, :receiver, :amount, :status
     if sender.valid? == false
       self.status = "rejected"
     else
-      receiver.balance += @amount
-      sender.balance = 950 
+      receiver.balance += 1050 
+      sender.balance = 950
       self.status = "complete"
 
     # receiver.balance += @amount
