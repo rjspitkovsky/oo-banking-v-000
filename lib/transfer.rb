@@ -15,6 +15,6 @@ attr_accessor :sender, :receiver, :amount, :status
 
   def execute_transaction
     self.status = "complete"
-  end 
+  end
 
 end
