@@ -22,8 +22,15 @@ attr_accessor :sender, :receiver, :amount, :status
     if sender.valid? == false
       self.status = "rejected"
       return "Transaction rejected. Please check your account balance."
-      #self.status = "rejected"
     end
   end
+
+  def reverse_transfer
+    if self.status == "complete"
+      receiver.balance -= @amount
+      sender.balance += @amount
+      self.status == "reversed"
+    end
+  end 
 
 end
